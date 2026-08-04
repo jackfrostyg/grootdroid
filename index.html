@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Grootdroid Utility</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Grootdroid Utility</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Grootdroid Utility</h2>
+            
+            <div class="search-section">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="e.g., Snapdragon 888, Redmi Note 10, IMEI Checker...">
+                    <button onclick="performSearch()">Search</button>
+                    <div class="search-tooltip">
+                        💡 If you're searching using the chipset model, please don't include "Snapdragon" e.g., instead of searching Snapdragon 765G, search "765G" instead for better result.
+                    </div>
+                </div>
+                <div id="search-results" class="search-results"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About Mobile Tools Hub</h2>
+            <p>We provide free, easy-to-use tools for mobile phone users. Whether you need to check your IMEI, calculate screen specifications, or understand network compatibility, we've got you covered.</p>
+            <p>All tools work directly in your browser - no downloads or installations required!</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mobile Tools Hub - Free Tools for Everyone</p>
+        </div>
+    </footer>
+
+    <!-- Welcome Popup Notification -->
+    <div id="welcome-popup" class="welcome-popup">
+        <div class="popup-overlay"></div>
+        <div class="popup-content">
+            <button class="popup-close" onclick="closeWelcomePopup()">&times;</button>
+            <div class="popup-icon">💡</div>
+            <h3>Welcome to Grootdroid Utility</h3>
+            <p>Search using the <strong>chipset model</strong>, <strong>firmware</strong> (optional: variant).</p>
+            <div class="popup-examples">
+                <span class="example-tag">888</span>
+                <span class="example-tag">765g</span>
+                <span class="example-tag">flash tool</span>
+                <span class="example-tag">edl</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="file-database.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
