@@ -54,9 +54,9 @@ function performSearch() {
                             <div class="result-main">
                                 <span class="result-icon">${icon}</span>
                                 <span class="result-name">${result.name}</span>
-                                <span class="result-brand ${brandClass}">${result.brand}</span>
+                                <span class="result-brand ${brandClass}">FIREHOSE</span>
                             </div>
-                            ${result.chipset ? `<span class="result-chip">${result.chipset}</span>` : ''}
+                            ${result.brand ? `<span class="result-chip">${result.brand}</span>` : ''}
                         </div>
                     `;
                 }).join('')}
