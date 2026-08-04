@@ -100,9 +100,9 @@ const fileDatabase = [];
 Object.keys(gdriveLinks).forEach(filePath => {
     const fileName = filePath.split('/').pop();
     
-    // Extract brand from path (first folder)
+    // Extract brand from path (second folder, skip "Firehose")
     const pathParts = filePath.split('/');
-    const brand = pathParts.length > 1 ? pathParts[0] : '';
+    const brand = pathParts.length > 2 ? pathParts[1] : (pathParts.length > 1 ? pathParts[0] : '');
     
     // Extract chipset info from filename
     const chipsetMatch = fileName.match(/(\d{3,4}[a-z]*)/i);
